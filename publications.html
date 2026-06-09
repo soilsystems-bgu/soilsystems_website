@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Soil Systems Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="font-sans bg-white text-stone-800 antialiased">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-100">
+    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="text-sm font-semibold tracking-tight text-stone-900">Soil Systems Lab</a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-stone-500">
+        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
+        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
+        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
+        <a href="publications.html" class="text-stone-900 font-medium">Publications</a>
+        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
+        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-stone-500" aria-label="Menu">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 bg-white">
+      <div class="flex flex-col px-6 py-4 gap-4 text-sm text-stone-500">
+        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
+        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
+        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
+        <a href="publications.html" class="text-stone-900 font-medium">Publications</a>
+        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
+        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-12">
+    <div class="fade-up">
+      <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Peer-Reviewed Work</p>
+      <h1 class="text-4xl font-bold tracking-tight text-stone-900 mb-4">Publications</h1>
+      <p class="text-base text-stone-500 max-w-xl leading-relaxed">Selected publications from the Soil Systems Lab. For a complete list, see the PI's Google Scholar profile.</p>
+    </div>
+  </section>
+
+  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
+
+  <!-- 2026 -->
+  <section class="max-w-5xl mx-auto px-6 py-14">
+    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">2026</p>
+    <div class="flex flex-col gap-6">
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4 group">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">Nature Communications</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Global Hotspots of Particulate Organic Carbon Losses under Climate Change</p>
+          <p class="text-sm text-stone-400">Sun et al.</p>
+        </div>
+      </div>
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4 group">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">Journal of Environmental Management</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Integrated and managed grasses shape soil pore networks in tropical systems</p>
+          <p class="text-sm text-stone-400">Bordonal et al.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
+
+  <!-- 2025 -->
+  <section class="max-w-5xl mx-auto px-6 py-14">
+    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">2025</p>
+    <div class="flex flex-col gap-6">
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-amber-50 text-amber-700 text-xs font-medium px-2.5 py-1 rounded-lg">Environmental Chemistry Letters</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Micro-Scale Mapping of Soil Organic Carbon Using Soft X-Ray Spectromicroscopy</p>
+          <p class="text-sm text-stone-400">Dor et al.</p>
+        </div>
+      </div>
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Miscanthus effects on soil water retention compared to maize crops</p>
+        </div>
+      </div>
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Soil properties in short-grass steppe ecosystems under drought stress</p>
+        </div>
+      </div>
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Land use conversion impacts on pore structure and carbon storage</p>
+        </div>
+      </div>
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Organic matter composition differences across tropical land uses</p>
+        </div>
+      </div>
+
+      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
+        <div class="flex-shrink-0 mt-0.5">
+          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
+        </div>
+        <div>
+          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Enzyme activity suppression in periodically waterlogged soils</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
+
+  <!-- 2019–2023 -->
+  <section class="max-w-5xl mx-auto px-6 py-14">
+    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">2019 – 2023</p>
+    <div class="fade-up max-w-2xl">
+      <p class="text-sm text-stone-500 leading-relaxed mb-6">Earlier work addressed foundational topics in soil science, including:</p>
+      <ul class="flex flex-col gap-3">
+        <li class="flex items-start gap-3 text-sm text-stone-600">
+          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
+          Soil aggregation mechanisms
+        </li>
+        <li class="flex items-start gap-3 text-sm text-stone-600">
+          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
+          Clay mineral assembly
+        </li>
+        <li class="flex items-start gap-3 text-sm text-stone-600">
+          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
+          Pesticide mobility in soil
+        </li>
+        <li class="flex items-start gap-3 text-sm text-stone-600">
+          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
+          Soil structural changes related to wetting cycles
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Scholar CTA -->
+  <section class="max-w-5xl mx-auto px-6 pb-20">
+    <div class="fade-up bg-stone-50 rounded-2xl px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div>
+        <h3 class="text-base font-semibold text-stone-900 mb-1">Full publication list</h3>
+        <p class="text-sm text-stone-500">Available via the PI's Google Scholar profile.</p>
+      </div>
+      <a href="https://scholar.google.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-stone-700 transition-colors whitespace-nowrap">
+        Google Scholar <i data-lucide="external-link" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-100">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+      <span>© 2026 Soil Systems Lab. All rights reserved.</span>
+      <a href="contact.html" class="hover:text-stone-600 transition-colors">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
