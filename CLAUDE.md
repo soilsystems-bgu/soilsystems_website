@@ -2,40 +2,38 @@
 
 ## Stack
 - Plain multi-page HTML, no framework, no build step
-- One shared stylesheet `assets/site.css` and script `assets/site.js`
+- One shared stylesheet `assets/site.css` and script `assets/site.js` (mobile menu + fade-in only)
 - Fonts: Geist + Geist Mono from Google Fonts (the only external dependency)
 - Images in `images/`, web JPEGs, ≤1400 px (hero ≤2400 px)
+- Profile logos in `assets/icons/` are from Simple Icons (CC0)
 - Deployed: Netlify + GitHub
+
+The nav and footer are repeated in every page. When changing them, change all pages
+(index, research, people, publications, opportunities, contact, 404).
 
 ## Look ("D · Field & Specimen")
 - Warm light paper ground (`--paper` #f7f5f0), near-black ink, rounded corners (16 px cards, 12 px buttons)
-- Colour comes from the lab's micrographs, used as small tags per research theme:
-  teal = structure, ochre = carbon, indigo = imaging, olive = land use
-- One dark "specimen" band per page at most (the scale strip on the homepage)
-- Monospace (Geist Mono) for kickers, captions and scale labels
+- Colour comes from the lab's own images, not from decoration
 - Gentle fade-in on scroll only; respects reduced motion
 
 ## Don't
+- No keyword tags or pills (Structure, Carbon, …): they read as generic and narrow the lab's scope
 - No emoji, no gradient text or loud gradient backgrounds (the hero photo scrim is the exception)
 - No animated or collapsing text boxes
 - No new frameworks or build steps; edit the HTML directly
 - No text below 12 px
 
-## Pages
-- index.html — hero, scale strip, themes, latest publications, team
-- research.html — research intro, three themes, current projects
+## Pages and flow
+- index.html — hero, one-paragraph overview, three current projects, latest publications + people, join band
+- research.html — overview, then one block per project (`id` = project slug, linked from home and opportunities)
 - people.html
-- publications.html — static list + live additions from ORCID (see below)
-- opportunities.html
-- contact.html
+- publications.html — static list by year; update by hand (each item has `data-doi`)
+- opportunities.html — open positions first (`#positions`, each card `#<project>-position`), then requirements and how to apply
+- contact.html — email, address, map
+- 404.html — Netlify serves it for missing pages
 
-## Publications
-`publications.html` holds the full list by year; each item carries `data-doi`.
-On load, `assets/site.js` reads the public ORCID record (0000-0001-9037-3799) and
-appends any journal article whose DOI is not on the page, with authors from Crossref
-and a "new" badge. Preprint DOIs (SSRN, Research Square, bioRxiv) are skipped.
-To make a new paper permanent, copy it into the static list.
+Links into the middle of a page always use an anchor (`opportunities.html#positions`) so visitors land on what they clicked for.
 
-## Scale strip (homepage)
-Log axis from 100 m (0%) to 1 nm (100%): `left = (2 − log10(metres)) / 11`.
-Each bar sets `--l` (start), `--w` (width) and `--c` (colour) inline.
+## Parked ideas
+- Scale strip ("Soil is different at every scale"): removed for now; the first version is in git history (commit f26563d) if revisited.
+- Hero video: a muted ~10 s loop (1–2 MB, with a poster image) would fit the hero.
