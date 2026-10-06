@@ -1,14 +1,14 @@
 /* Soil Systems Lab — shared styles. Plain CSS, no build step. */
 
 :root {
-  --paper: #f7f5f0;
-  --paper-2: #ece7dc;
+  --paper: #f5f5f2;
+  --paper-2: #e8eae5;
   --card: #ffffff;
-  --ink: #1d1b18;
-  --ink-2: #45413a;
-  --muted: #5f5950;
-  --line: #e2dccf;
-  --line-2: #d3ccbd;
+  --ink: #1a1d1c;
+  --ink-2: #3e4442;
+  --muted: #59605d;
+  --line: #dfe2dc;
+  --line-2: #cdd1ca;
   --night: #121517;
   --night-2: #1e2327;
   --night-ink: #f4f2ec;
@@ -57,11 +57,12 @@ p { margin: 0; text-wrap: pretty; }
 .mono { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.02em; }
 .kicker { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .lead { font-size: 20px; color: var(--ink-2); max-width: 680px; }
-.section { padding: 96px 0; }
-.section-sm { padding: 56px 0; }
+.section { padding-top: 96px; padding-bottom: 96px; }
+.section-sm { padding-top: 56px; padding-bottom: 56px; }
 .stack { display: flex; flex-direction: column; gap: 20px; }
 .row-between { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px; }
 .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(var(--min, 280px), 100%), 1fr)); }
+.h-hero { font-size: clamp(40px, 5.2vw, 68px); line-height: 1; letter-spacing: -0.035em; }
 .h-xl { font-size: clamp(48px, 7vw, 92px); line-height: 0.98; letter-spacing: -0.04em; }
 .h-lg { font-size: clamp(36px, 4.4vw, 52px); }
 .h-md { font-size: clamp(28px, 3vw, 38px); }
@@ -72,7 +73,7 @@ p { margin: 0; text-wrap: pretty; }
   position: relative; z-index: 2;
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;
   padding: 10px 10px 10px 22px;
-  background: rgba(247, 245, 240, 0.95);
+  background: rgba(245, 245, 242, 0.95);
   border: 1px solid var(--line);
   border-radius: 14px;
 }
@@ -120,7 +121,7 @@ p { margin: 0; text-wrap: pretty; }
   position: relative; overflow: hidden; border-radius: var(--radius);
   min-height: min(600px, 78vh);
   display: flex; flex-direction: column; justify-content: space-between;
-  background: #3b2f25;
+  background: #2b2f2d;
 }
 .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero::after {
@@ -152,7 +153,13 @@ p { margin: 0; text-wrap: pretty; }
 
 .panel { background: var(--paper-2); border-radius: var(--radius); padding: 64px 0; }
 
+/* ---------- homepage statement ---------- */
+.statement { max-width: 860px; display: flex; flex-direction: column; gap: 16px; }
+.statement p { font-size: 19px; color: var(--ink-2); }
+
 /* ---------- projects ---------- */
+.img-ph { width: 100%; aspect-ratio: 3 / 2; border-radius: var(--radius); border: 1px dashed var(--line-2); background: var(--paper-2); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.card > .img-ph { aspect-ratio: 16 / 10; border-radius: 0; border: 0; border-bottom: 1px dashed var(--line-2); }
 .project { display: grid; gap: 40px; align-items: center; grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); padding: 48px 0; border-top: 1px solid var(--line-2); }
 .project img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); }
 .project p { color: var(--ink-2); }
@@ -205,9 +212,11 @@ p { margin: 0; text-wrap: pretty; }
 /* ---------- join + footer ---------- */
 .join { background: var(--accent); color: #fff; border-radius: var(--radius); padding: 64px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px; }
 @media (max-width: 640px) { .join { padding: 44px 24px; } }
-.footer { padding: 40px 28px 48px; display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); font-size: 15px; color: var(--muted); }
+.footer { padding: 40px 28px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: start; gap: 24px 48px; font-size: 15px; color: var(--muted); }
 .footer b { color: var(--ink); font-size: 18px; letter-spacing: -0.02em; }
-.footer .stack { gap: 6px; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.footer-nav a { text-decoration: none; color: var(--ink-2); padding: 6px 0; }
+.footer-nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
 /* ---------- contact ---------- */
 .contact-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); }

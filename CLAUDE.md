@@ -24,7 +24,10 @@ The nav and footer are repeated in every page. When changing them, change all pa
 - No text below 12 px
 
 ## Pages and flow
-- index.html — hero, one-paragraph overview, three current projects, latest publications + people, join band
+- index.html — hero, one-paragraph overview, first three current projects, contact band.
+  No publications or people on the homepage (they go stale there).
+- Footer = lab name + site navigation only (no address, email or profile links).
+- Project order (home + research): plant–soil–microbiome, plant P uptake (BARD), soil-on-a-chip, microplastics, then student projects.
 - research.html — overview, then one block per project (`id` = project slug, linked from home and opportunities)
 - people.html
 - publications.html — static list by year; update by hand (each item has `data-doi`)
