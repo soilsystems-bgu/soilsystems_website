@@ -38,8 +38,9 @@ The nav and footer are repeated in every page. When changing them, change all pa
   New papers flow in automatically only if ORCID is kept up to date (ORCID's Crossref auto-update does this).
 - opportunities.html — "Join us" (menu label): one lead sentence, then three cards: who we look for,
   how to apply (teal, email button), postdoctoral fellowships. No project list (it would go stale).
-- contact.html — email, address, Google Maps link, and a photo of the Zin valley below the Sede Boqer Campus
-  (`images/sede-boqer-zin.jpg`, public domain, Wikimedia Commons: File:Midreshet_Ben-Gurion1.JPG by Yoavd, 2008; no credit required)
+- contact.html — email, address, Google Maps link, and an impressionist painting of the Zin valley
+  (`images/zin-valley-painting.jpg`, the PI's own `sdebo_impressionist.jpg`). Alternative tried: public-domain
+  photo File:Midreshet_Ben-Gurion1.JPG (Wikimedia Commons, Yoavd, no credit required), in commit 15e7aab.
 - 404.html — Netlify serves it for missing pages
 
 Links into the middle of a page always use an anchor (`opportunities.html#positions`) so visitors land on what they clicked for.
