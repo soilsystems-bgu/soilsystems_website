@@ -19,3 +19,11 @@ const io = 'IntersectionObserver' in window
     }, { threshold: 0.08 })
   : null;
 document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('in')));
+
+// Header gets a soft shadow once the page scrolls
+const header = document.querySelector('.site-header');
+if (header) {
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}

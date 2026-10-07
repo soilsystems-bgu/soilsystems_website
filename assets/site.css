@@ -44,7 +44,7 @@ a { color: inherit; }
 h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.025em; line-height: 1.05; text-wrap: balance; }
 p { margin: 0; text-wrap: pretty; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-[id] { scroll-margin-top: 24px; }
+[id] { scroll-margin-top: 96px; }
 .skip { position: absolute; left: -9999px; top: 8px; z-index: 10; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--paper); }
 .skip:focus { left: 16px; }
 
@@ -99,7 +99,6 @@ p { margin: 0; text-wrap: pretty; }
   .nav-links a { padding: 12px 10px; }
 }
 
-.page-top { padding-top: 16px; }
 
 /* ---------- buttons ---------- */
 .btn {
@@ -117,27 +116,47 @@ p { margin: 0; text-wrap: pretty; }
 .link-arrow { font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--line-2); padding-bottom: 2px; }
 .link-arrow:hover { border-color: var(--ink); }
 
-/* ---------- home hero ---------- */
-.hero {
-  position: relative; overflow: hidden; border-radius: var(--radius);
-  min-height: min(600px, 78vh);
-  display: flex; flex-direction: column; justify-content: space-between;
-  background: #2b2f2d;
+/* ---------- sticky site header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  padding: 10px 0;
+  background: rgba(245, 245, 242, 0.88);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
+  transition: box-shadow .2s ease;
 }
-.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(18,15,12,.35) 0%, rgba(18,15,12,0) 30%, rgba(18,15,12,0) 42%, rgba(18,15,12,.74) 100%);
+.site-header.scrolled { box-shadow: 0 1px 0 var(--line), 0 6px 18px rgba(20, 24, 22, 0.05); }
+.site-header .nav { background: transparent; border: 0; padding: 2px 0 2px 8px; }
+
+/* ---------- home hero: five image panels + title card ---------- */
+.hero2 { position: relative; height: clamp(440px, 62vh, 600px); border-radius: var(--radius); overflow: hidden; background: var(--paper); margin-top: 6px; }
+.hero-panels { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+.hero-panels figure { margin: 0; position: relative; overflow: hidden; background: #1a1d1c; }
+.hero-panels img { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; animation: drift 26s ease-in-out infinite alternate; }
+.hero-panels figure:nth-child(2) img { animation-delay: -6s; }
+.hero-panels figure:nth-child(3) img { animation-delay: -12s; }
+.hero-panels figure:nth-child(4) img { animation-delay: -18s; }
+.hero-panels figure:nth-child(5) img { animation-delay: -24s; }
+.hero-panels span {
+  position: absolute; top: 12px; right: 12px; padding: 3px 9px; border-radius: 999px;
+  font-family: var(--mono); font-size: 12px; color: #fff; background: rgba(0, 0, 0, 0.32);
 }
-.hero .nav { margin: 16px; }
-.hero-text { position: relative; z-index: 1; padding: 0 44px 52px; max-width: 900px; color: #fbf9f4; display: flex; flex-direction: column; gap: 20px; }
-.hero-text .lead { color: #f1ece3; }
-.chip-glass {
-  align-self: flex-start; padding: 6px 12px; border-radius: 999px;
-  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.32);
-  font-family: var(--mono); font-size: 12px; letter-spacing: .06em;
+@keyframes drift { from { transform: scale(1.03) translate(0, 0); } to { transform: scale(1.14) translate(-2%, -1.5%); } }
+.hero-card {
+  position: absolute; left: 24px; bottom: 24px; max-width: 470px;
+  padding: 24px 26px; border-radius: var(--radius);
+  background: rgba(245, 245, 242, 0.92);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  display: flex; flex-direction: column; gap: 14px;
 }
-@media (max-width: 640px) { .hero-text { padding: 0 22px 32px; } }
+.hero-card .lead { font-size: 17px; }
+.hero-card .h-hero { font-size: clamp(34px, 3.6vw, 50px); }
+@media (max-width: 760px) {
+  .hero2 { height: auto; overflow: visible; }
+  .hero-panels { position: relative; height: 220px; border-radius: var(--radius); overflow: hidden; }
+  .hero-panels span { display: none; }
+  .hero-card { position: static; max-width: none; padding: 24px 4px 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-panels img { animation: none; } }
 
 /* ---------- inner page header ---------- */
 .page-head { padding-top: 48px; padding-bottom: 32px; display: flex; flex-direction: column; gap: 16px; }
