@@ -235,6 +235,31 @@ p { margin: 0; text-wrap: pretty; }
 .icon-link img { width: 18px; height: 18px; flex: none; }
 
 /* ---------- people ---------- */
+/* people page: PI on its own row, team as compact two-per-row cards (Nissan-style) */
+.pi-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; align-items: center; padding-bottom: 40px; border-bottom: 1px solid var(--line-2); margin-bottom: 36px; }
+.pi-photo { width: 220px; height: 220px; object-fit: cover; border-radius: var(--radius); }
+.pi-text { display: flex; flex-direction: column; gap: 8px; max-width: 640px; }
+.pi-text h2 { font-size: 28px; letter-spacing: -0.025em; }
+.pi-text .role { color: var(--ink-2); font-size: 16px; }
+.pi-text p:not(.role) { color: var(--ink-2); font-size: 16px; }
+.pi-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 6px; font-size: 15px; }
+.pi-links a { color: var(--ink-2); text-underline-offset: 3px; }
+.member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr)); gap: 28px 40px; }
+.member { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: center; }
+.member-photo { width: 120px; height: 120px; object-fit: cover; border-radius: 14px; }
+.member-photo.initials, .pi-photo.initials { display: flex; align-items: center; justify-content: center; background: var(--paper-2); color: #8a8174; font-weight: 600; letter-spacing: -0.03em; }
+.member-photo.initials { font-size: 30px; }
+.pi-photo.initials { font-size: 52px; }
+.member-text { display: flex; flex-direction: column; gap: 3px; }
+.member-text h3 { font-size: 18px; letter-spacing: -0.015em; line-height: 1.25; }
+.member .role { color: var(--ink-2); font-size: 15px; }
+.member .project { font-size: 14px; color: var(--muted); text-underline-offset: 3px; margin-top: 4px; }
+@media (max-width: 640px) {
+  .pi-row { grid-template-columns: 1fr; gap: 18px; }
+  .pi-photo { width: 160px; height: 160px; }
+  .member { grid-template-columns: 88px minmax(0, 1fr); gap: 16px; }
+  .member-photo { width: 88px; height: 88px; }
+}
 .people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 40px 28px; }
 .person { display: flex; flex-direction: column; gap: 4px; }
 .person .photo, .person .initials { margin-bottom: 12px; }
