@@ -216,7 +216,7 @@ p { margin: 0; text-wrap: pretty; }
 .project-text { display: flex; flex-direction: column; gap: 10px; }
 .project-text h2 { font-size: clamp(22px, 2vw, 28px); line-height: 1.18; letter-spacing: -0.02em; }
 .project-text p { color: var(--ink-2); }
-.summary-q { color: var(--ink); font-weight: 500; }
+.summary-q { display: block; margin-bottom: 6px; color: var(--ink); font-weight: 500; }
 @media (max-width: 760px) {
   .project-list { gap: 36px; }
   .project-row { grid-template-columns: 1fr; gap: 16px; }
