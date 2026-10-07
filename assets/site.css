@@ -275,6 +275,13 @@ p { margin: 0; text-wrap: pretty; }
 .member-photo.initials, .pi-photo.initials { display: flex; align-items: center; justify-content: center; background: var(--paper-2); color: #8a8174; font-weight: 600; letter-spacing: -0.03em; }
 .member-photo.initials { font-size: 30px; }
 .pi-photo.initials { font-size: 52px; }
+.member-photo.avatar, .pi-photo.avatar {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(160deg, #e6f0ee 0%, #d4e4e1 100%);
+  color: #7fa7a2;
+}
+.member-photo.avatar svg { width: 54%; height: 54%; }
+.pi-photo.avatar svg { width: 50%; height: 50%; }
 .member-text { display: flex; flex-direction: column; gap: 3px; }
 .member-text h3 { font-size: 18px; letter-spacing: -0.015em; line-height: 1.25; }
 .member .role { color: var(--ink-2); font-size: 15px; }
