@@ -331,7 +331,9 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ---------- contact ---------- */
 .contact-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); }
-.map { width: 100%; min-height: 380px; height: 100%; border: 0; border-radius: var(--radius); }
+.contact-photo { margin: 0; position: relative; min-height: 380px; border-radius: var(--radius); overflow: hidden; }
+.contact-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.contact-photo figcaption { position: absolute; left: 14px; bottom: 14px; padding: 4px 10px; border-radius: 999px; font-size: 13px; color: #fff; background: rgba(0, 0, 0, 0.45); }
 .placeholder { border: 1px dashed var(--line-2); border-radius: var(--radius-sm); padding: 18px 22px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
 
 /* ---------- motion ---------- */
