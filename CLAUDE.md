@@ -24,7 +24,8 @@ The nav and footer are repeated in every page. When changing them, change all pa
 - No text below 12 px
 
 ## Pages and flow
-- index.html — hero, one-paragraph overview, first three current projects, contact band.
+- index.html — five-panel image strip (field → mineral surfaces) with a one-line title strip,
+  first three current projects, contact band. The overview paragraph lives on research.html only.
   No publications or people on the homepage (they go stale there).
 - Footer = lab name + site navigation only (no address, email or profile links).
 - Project order (home + research): plant–soil–microbiome, plant P uptake (BARD), soil-on-a-chip, microplastics, then student projects.
