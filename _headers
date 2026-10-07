@@ -1,0 +1,18 @@
+# Netlify response headers for every page and file.
+# - X-Frame-Options / frame-ancestors: other sites cannot show this site inside a frame.
+# - X-Content-Type-Options: browsers must not guess file types.
+# - Referrer-Policy: links to other sites share only this domain, not the full page address.
+# - Permissions-Policy: the site never asks for camera, microphone or location.
+# - Content-Security-Policy: everything loads from this site, except the Publications page,
+#   which reads ORCID and Crossref. The one inline script (adds the "js" class) is allowed by its hash;
+#   if that script changes, update the sha256 value below.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://pub.orcid.org https://api.crossref.org; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+
+# Fonts never change: let browsers cache them for a year.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
