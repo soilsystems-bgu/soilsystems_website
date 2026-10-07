@@ -36,8 +36,8 @@ The nav and footer are repeated in every page. When changing them, change all pa
   DOI is not on the page (authors from Crossref, preprints skipped). The list on the page stays the baseline.
   To go back to a purely manual list, delete the `data-orcid` attribute in publications.html; nothing else changes.
   New papers flow in automatically only if ORCID is kept up to date (ORCID's Crossref auto-update does this).
-- opportunities.html — "Join us" (menu label): open invitation first, then what we look for + how to apply,
-  then example projects looking for students (from PROJECTS entries with an `open` level). Anchors `#positions`, `#apply`, `#<project>-position` kept.
+- opportunities.html — "Join us" (menu label): one lead sentence, then three cards: who we look for,
+  how to apply (teal, email button), postdoctoral fellowships. No project list (it would go stale).
 - contact.html — email, address, map
 - 404.html — Netlify serves it for missing pages
 
