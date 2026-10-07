@@ -156,7 +156,11 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 1180px) { .hero-panels em { display: none; } }
 .teaser-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 760px) { .teaser-grid { grid-template-columns: 1fr; } }
-@keyframes drift { from { transform: scale(1.03) translate(0, 0); } to { transform: scale(1.14) translate(-2%, -1.5%); } }
+@keyframes drift { from { transform: scale(calc(var(--z, 1) * 1.03)) translate(0, 0); } to { transform: scale(calc(var(--z, 1) * 1.14)) translate(-2%, -1.5%); } }
+/* mesocosm render: zoom in so the soil block fills the panel */
+.hero-panels figure:nth-child(2) img { --z: 1.3; object-position: 50% 60%; }
+.hero-panels figure:nth-child(3) { background: #f1ede6; }
+.hero-panels figure:nth-child(3) img { --z: 1.22; object-position: 50% 35%; }
 .hero-card {
   position: absolute; left: 24px; bottom: 24px; max-width: calc(100% - 48px);
   padding: 16px 28px 17px; border-radius: var(--radius);
