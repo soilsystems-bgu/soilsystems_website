@@ -31,7 +31,11 @@ The nav and footer are repeated in every page. When changing them, change all pa
 - Project order (home + research): plant–soil–microbiome, plant P uptake (BARD), soil-on-a-chip, microplastics, then student projects.
 - research.html — overview, then one block per project (`id` = project slug, linked from home and opportunities)
 - people.html
-- publications.html — static list by year; update by hand (each item has `data-doi`)
+- publications.html — list by year (each item has `data-doi`), plus automatic additions from ORCID:
+  `assets/site.js` reads the public ORCID record (0000-0001-9037-3799) and adds any journal article whose
+  DOI is not on the page (authors from Crossref, preprints skipped). The list on the page stays the baseline.
+  To go back to a purely manual list, delete the `data-orcid` attribute in publications.html; nothing else changes.
+  New papers flow in automatically only if ORCID is kept up to date (ORCID's Crossref auto-update does this).
 - opportunities.html — open positions first (`#positions`, each card `#<project>-position`), then requirements and how to apply
 - contact.html — email, address, map
 - 404.html — Netlify serves it for missing pages
