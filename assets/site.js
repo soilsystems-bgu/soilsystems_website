@@ -16,7 +16,7 @@ const io = 'IntersectionObserver' in window
       entries.forEach((e) => {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.08 })
+    }, { threshold: 0 })
   : null;
 document.querySelectorAll('.reveal').forEach((el) => (io ? io.observe(el) : el.classList.add('in')));
 
