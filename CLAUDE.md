@@ -38,6 +38,12 @@ The nav and footer are repeated in every page. When changing them, change all pa
 
 Links into the middle of a page always use an anchor (`opportunities.html#positions`) so visitors land on what they clicked for.
 
+## Hero drift animation
+Current: 18 s cycle, scale 1.04 → 1.22, translate(-3%, -2.5%), delays -4/-8/-12/-16 s;
+mesocosm panel damped with `--z: 0.9`.
+Previous subtler setting (commit af89306): 26 s cycle, scale 1.03 → 1.14, translate(-2%, -1.5%),
+delays -6/-12/-18/-24 s. Both are in the `@keyframes drift` comment in `assets/site.css`.
+
 ## Parked ideas
 - Scale strip ("Soil is different at every scale"): removed for now; the first version is in git history (commit f26563d) if revisited.
 - Hero video: a muted ~10 s loop (1–2 MB, with a poster image) would fit the hero.
