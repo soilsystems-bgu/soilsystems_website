@@ -182,6 +182,21 @@ p { margin: 0; text-wrap: pretty; }
   .hero-card { position: static; transform: none; text-align: left; align-items: flex-start; max-width: none; padding: 22px 4px 0; border: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 @media (prefers-reduced-motion: reduce) { .hero-panels img { animation: none; } }
+/* hero strip: hovering a panel widens it a little, brightens it and shows its full scale label */
+@media (hover: hover) and (min-width: 761px) {
+  .hero-panels { transition: grid-template-columns .55s cubic-bezier(.2, .7, .2, 1); }
+  .hero-panels:has(figure:nth-child(1):hover) { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); }
+  .hero-panels:has(figure:nth-child(2):hover) { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); }
+  .hero-panels:has(figure:nth-child(3):hover) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); }
+  .hero-panels:has(figure:nth-child(4):hover) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr); }
+  .hero-panels:has(figure:nth-child(5):hover) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr); }
+  .hero-panels figure img { transition: filter .4s ease; }
+  .hero-panels figure:hover img { filter: brightness(1.06) saturate(1.12); }
+  .hero-panels figure span { transition: background-color .3s ease; }
+  .hero-panels figure:hover span { background: rgba(0, 0, 0, 0.66); }
+  .hero-panels figure:hover em { display: inline; }
+}
+
 
 /* ---------- inner page header ---------- */
 .page-head { padding-top: 36px; padding-bottom: 28px; display: flex; flex-direction: column; gap: 16px; }
