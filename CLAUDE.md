@@ -3,7 +3,11 @@
 ## Stack
 - Plain multi-page HTML, no framework, no build step
 - One shared stylesheet `assets/site.css` and script `assets/site.js` (mobile menu + fade-in only)
-- Fonts: Geist + Geist Mono from Google Fonts (the only external dependency)
+- Fonts: Geist + Geist Mono, self-hosted in `assets/fonts/` (variable woff2, SIL OFL licence); no Google Fonts
+- `_headers`: Netlify security headers incl. a Content-Security-Policy (own files + ORCID/Crossref).
+  The inline `<script>` that adds the `js` class is allowed by its sha256 hash: change that script and the hash must change.
+- Deploy: copy *.html, _headers, assets/, images/ into a clean folder and run
+  `npx netlify-cli deploy --prod --dir <folder> --site b69253c3-88e0-4421-9ff0-3f59ad597543` (CLAUDE.md is never deployed)
 - Images in `images/`, web JPEGs, ≤1400 px (hero ≤2400 px)
 - Profile logos in `assets/icons/` are from Simple Icons (CC0)
 - Deployed: Netlify + GitHub
