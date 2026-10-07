@@ -41,6 +41,8 @@ The nav and footer are repeated in every page. When changing them, change all pa
 - contact.html — email, address, Google Maps link, and an impressionist painting of the Zin valley
   (`images/zin-valley-painting.jpg`, the PI's own `sdebo_impressionist.jpg`). Alternative tried: public-domain
   photo File:Midreshet_Ben-Gurion1.JPG (Wikimedia Commons, Yoavd, no credit required), in commit 15e7aab.
+  BGU logo `assets/logos/bgu.svg`: Wikimedia Commons File:Ben-Gurion_University_of_the_Negev_logo.svg
+  (public domain, trademarked), linked to bgu.ac.il.
 - 404.html — Netlify serves it for missing pages
 
 Links into the middle of a page always use an anchor (`opportunities.html#positions`) so visitors land on what they clicked for.

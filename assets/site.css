@@ -331,6 +331,10 @@ p { margin: 0; text-wrap: pretty; }
 
 /* ---------- contact ---------- */
 .contact-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); }
+.contact-card { gap: 24px; background: var(--card); border-color: var(--line); }
+.contact-welcome { font-size: 17px; color: var(--ink-2); }
+.contact-logo { margin-top: auto; padding-top: 8px; align-self: flex-start; }
+.contact-logo img { width: 220px; height: auto; }
 .contact-photo { margin: 0; position: relative; min-height: 380px; border-radius: var(--radius); overflow: hidden; }
 .contact-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 .contact-photo figcaption { position: absolute; left: 14px; bottom: 14px; padding: 4px 10px; border-radius: 999px; font-size: 13px; color: #fff; background: rgba(0, 0, 0, 0.45); }
