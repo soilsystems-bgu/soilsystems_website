@@ -244,6 +244,10 @@ p { margin: 0; text-wrap: pretty; }
 .pi-text p:not(.role) { color: var(--ink-2); font-size: 16px; }
 .pi-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 6px; font-size: 15px; }
 .pi-links a { color: var(--ink-2); text-underline-offset: 3px; }
+.pi-links { align-items: center; }
+.icon-only { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 10px; }
+.icon-only:hover { background: rgba(31, 95, 90, 0.08); }
+.icon-only img { width: 20px; height: 20px; }
 .member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr)); gap: 28px 40px; }
 .member { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: center; }
 .member-photo { width: 120px; height: 120px; object-fit: cover; border-radius: 14px; }
