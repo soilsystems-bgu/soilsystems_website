@@ -27,3 +27,19 @@ if (header) {
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 }
+
+// Homepage hero: starts as a rounded panel and widens to the full window as the page scrolls.
+// The CSS reads --p (0 = landing, 1 = fully expanded).
+const hero = document.querySelector('.hero2');
+if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let queued = false;
+  const update = () => {
+    const p = Math.min(1, Math.max(0, window.scrollY / (window.innerHeight * 0.35)));
+    hero.style.setProperty('--p', p.toFixed(3));
+    queued = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!queued) { queued = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+}
