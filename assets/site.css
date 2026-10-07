@@ -143,11 +143,11 @@ p { margin: 0; text-wrap: pretty; }
 }
 .hero-panels { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
 .hero-panels figure { margin: 0; position: relative; overflow: hidden; background: #1a1d1c; }
-.hero-panels img { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; animation: drift 18s ease-in-out infinite alternate; }
-.hero-panels figure:nth-child(2) img { animation-delay: -4s; }
-.hero-panels figure:nth-child(3) img { animation-delay: -8s; }
-.hero-panels figure:nth-child(4) img { animation-delay: -12s; }
-.hero-panels figure:nth-child(5) img { animation-delay: -16s; }
+.hero-panels img { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; animation: drift 26s ease-in-out infinite alternate; }
+.hero-panels figure:nth-child(2) img { animation-delay: -6s; }
+.hero-panels figure:nth-child(3) img { animation-delay: -12s; }
+.hero-panels figure:nth-child(4) img { animation-delay: -18s; }
+.hero-panels figure:nth-child(5) img { animation-delay: -24s; }
 .hero-panels span {
   position: absolute; top: 12px; right: 12px; padding: 3px 9px; border-radius: 999px;
   font-family: var(--mono); font-size: 11.5px; letter-spacing: -0.02em; white-space: nowrap; color: #fff; background: rgba(0, 0, 0, 0.5);
@@ -156,12 +156,12 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 1180px) { .hero-panels em { display: none; } }
 .teaser-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 760px) { .teaser-grid { grid-template-columns: 1fr; } }
-/* Drift. Previous, subtler setting (commit af89306): 26s cycle, delays -6/-12/-18/-24s,
-   scale 1.03 -> 1.14, translate(-2%, -1.5%). */
-@keyframes drift { from { transform: scale(calc(var(--z, 1) * 1.04)) translate(0, 0); } to { transform: scale(calc(var(--z, 1) * 1.22)) translate(-3%, -2.5%); } }
-/* mesocosm cube: damp the zoom so the whole cube always stays in view */
+/* Drift: slow and subtle. (A stronger 18s / 1.04 -> 1.22 version was tried and rejected as too much.) */
+@keyframes drift { from { transform: scale(1.03) translate(0, 0); } to { transform: scale(1.14) translate(-2%, -1.5%); } }
+/* mesocosm cube fills most of its panel, so it gets a zoom-only drift that never clips it */
+@keyframes drift-soft { from { transform: scale(1); } to { transform: scale(1.05); } }
 .hero-panels figure:nth-child(2) { background: #1e2426; }
-.hero-panels figure:nth-child(2) img { --z: 0.9; }
+.hero-panels figure:nth-child(2) img { animation-name: drift-soft; }
 .hero-panels figure:nth-child(3) { background: #efebe4; }
 .hero-card {
   position: absolute; left: 24px; bottom: 24px; max-width: calc(100% - 48px);
