@@ -1,216 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publications — Soil Systems Lab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
-    }
-  </script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <style>
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications · Soil Systems Lab</title>
+  <meta name="description" content="Publications of the Soil Systems Lab and Maoz Dor.">
+  <meta property="og:title" content="Publications · Soil Systems Lab">
+  <meta property="og:description" content="Publications of the Soil Systems Lab and Maoz Dor.">
+  <meta property="og:image" content="https://soilsystemslab.netlify.app/images/field-hero.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="font-sans bg-white text-stone-800 antialiased">
-
-  <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-      <a href="index.html" class="text-sm font-semibold tracking-tight text-stone-900">Soil Systems Lab</a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-stone-500">
-        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
-        <a href="publications.html" class="text-stone-900 font-medium">Publications</a>
-        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-brand" href="index.html"><span>Soil Systems Lab</span><small>Ben-Gurion University of the Negev</small></a>
+      <button class="nav-menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html" aria-current="page">Publications</a>
+        <a href="opportunities.html">Join us</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </div>
-      <button id="menu-btn" class="md:hidden text-stone-500" aria-label="Menu">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 bg-white">
-      <div class="flex flex-col px-6 py-4 gap-4 text-sm text-stone-500">
-        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
-        <a href="publications.html" class="text-stone-900 font-medium">Publications</a>
-        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+</header>
 
-  <!-- Header -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-12">
-    <div class="fade-up">
-      <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Peer-Reviewed Work</p>
-      <h1 class="text-4xl font-bold tracking-tight text-stone-900 mb-4">Publications</h1>
-      <p class="text-base text-stone-500 max-w-xl leading-relaxed">Selected publications from the Soil Systems Lab. For a complete list, see the PI's Google Scholar profile.</p>
+<main id="main">
+  <section class="wrap">
+    <div class="inset page-head">
+      <h1 class="h-lg">Publications</h1>
+      <p class="lead">Publications from the lab, newest first. Also on our profiles:</p>
+    </div>
+    <div class="inset links" style="padding-bottom: 16px">
+      <a class="btn btn-line icon-link" href="https://scholar.google.com/citations?user=kAiViNgAAAAJ&amp;hl=en"><img src="assets/icons/google-scholar.svg" alt="">Google Scholar</a>
+      <a class="btn btn-line icon-link" href="https://www.researchgate.net/profile/Maoz-Dor/research"><img src="assets/icons/researchgate.svg" alt="">ResearchGate</a>
     </div>
   </section>
 
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
+  <!-- New papers: the list below is written by hand; assets/site.js also reads the public ORCID record
+       and adds any journal article whose DOI is not listed yet. Remove data-orcid to turn that off. -->
+  <section class="wrap" aria-label="Publication list">
+    <div class="inset" data-orcid="0000-0001-9037-3799" style="padding-bottom: 64px">
+      <section class="pub-year" data-year="2026">
+        <h2>2026</h2>
+        <ol class="pub-list">
+          <li data-doi="10.1016/j.soilbio.2026.110249">
+            <span class="pub-title">Nitrogen availability decouples soil pore size-defined microhabitat control of microbial carbon use efficiency</span>
+            <span class="pub-authors"><strong>Dor, M.</strong>, Guber, A.K., Tiemann, L., Kuzyakov, Y., Kravchenko, A.N.</span>
+            <span class="pub-meta">Soil Biology and Biochemistry, 221, 110249 · <a href="https://doi.org/10.1016/j.soilbio.2026.110249">doi:10.1016/j.soilbio.2026.110249</a></span>
+          </li>
+          <li data-doi="10.1038/s41467-026-71321-2">
+            <span class="pub-title">Global hotspots of particulate organic carbon losses under climate change</span>
+            <span class="pub-authors">Sun, S., Cotrufo, M.F., Viscarra Rossel, R.A. … <strong>Dor, M.</strong> … Chen, J.</span>
+            <span class="pub-meta">Nature Communications · <a href="https://doi.org/10.1038/s41467-026-71321-2">doi:10.1038/s41467-026-71321-2</a></span>
+          </li>
+          <li data-doi="10.1016/j.jenvman.2025.128323">
+            <span class="pub-title">Integrated and managed grasses shape soil pore networks and carbon processes in tropical agroecosystems: Insights from synchrotron X-ray tomography</span>
+            <span class="pub-authors">Bordonal, R.O., <strong>Dor, M.</strong>, Guber, A.K., Cherubin, M.R., Nascimento, A.F., Tenelli, S., La Scala, N., Cerri, C.E.P., Carvalho, J.L.N., Kravchenko, A.N.</span>
+            <span class="pub-meta">Journal of Environmental Management, 397, 128323 · <a href="https://doi.org/10.1016/j.jenvman.2025.128323">doi:10.1016/j.jenvman.2025.128323</a></span>
+          </li>
+        </ol>
+      </section>
 
-  <!-- 2026 -->
-  <section class="max-w-5xl mx-auto px-6 py-14">
-    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">2026</p>
-    <div class="flex flex-col gap-6">
+      <section class="pub-year" data-year="2025">
+        <h2>2025</h2>
+        <ol class="pub-list">
+          <li data-doi="10.1002/agg2.70181">
+            <span class="pub-title">Miscanthus × giganteus increases soil maximum water holding capacity compared to maize</span>
+            <span class="pub-authors">Nelson, J.T., <strong>Dor, M.</strong>, Studt, J., Carmenate Schrock, P.K., VanLoocke, A.D., McDaniel, M.D.</span>
+            <span class="pub-meta">Agrosystems, Geosciences &amp; Environment, 8(3), e70181 · <a href="https://doi.org/10.1002/agg2.70181">doi:10.1002/agg2.70181</a></span>
+          </li>
+          <li data-doi="10.1016/j.jenvman.2025.126557">
+            <span class="pub-title">Soil pore-size distributions and selected biochemical properties in short-grass steppe under long-term drought</span>
+            <span class="pub-authors">Thotakuri, G., <strong>Dor, M.</strong>, Smith, M.D., Guber, A.K., Kravchenko, A.N.</span>
+            <span class="pub-meta">Journal of Environmental Management, 391, 126557 · <a href="https://doi.org/10.1016/j.jenvman.2025.126557">doi:10.1016/j.jenvman.2025.126557</a></span>
+          </li>
+          <li data-doi="10.1016/j.agee.2025.109633">
+            <span class="pub-title">Long-term land use conversion influence on soil pore structure and organic carbon</span>
+            <span class="pub-authors"><strong>Dor, M.</strong>, Fan, L., Zamanian, K., Kravchenko, A.N.</span>
+            <span class="pub-meta">Agriculture, Ecosystems &amp; Environment, 387, 109633 · <a href="https://doi.org/10.1016/j.agee.2025.109633">doi:10.1016/j.agee.2025.109633</a></span>
+          </li>
+          <li data-doi="10.1016/j.jenvman.2025.126067">
+            <span class="pub-title">Contrasting land-uses affect chemical composition of organic matter in tropical soils: A case study via osmium staining and infrared spectroscopy</span>
+            <span class="pub-authors"><strong>Dor, M.</strong>, De Oliveira Bordonal, R., Guber, A.K., Rivers, M.L., Kravchenko, A.N.</span>
+            <span class="pub-meta">Journal of Environmental Management, 388, 126067 · <a href="https://doi.org/10.1016/j.jenvman.2025.126067">doi:10.1016/j.jenvman.2025.126067</a></span>
+          </li>
+          <li data-doi="10.1016/j.geoderma.2025.117278">
+            <span class="pub-title">Suppression of hydrolytic enzyme activities by short-term aeration of periodically anoxic soils: Evidence from upland ecosystems</span>
+            <span class="pub-authors">Wang, C., <strong>Dor, M.</strong>, Kravchenko, A.N., Guber, A., Dorodnikov, M.</span>
+            <span class="pub-meta">Geoderma, 457, 117278 · <a href="https://doi.org/10.1016/j.geoderma.2025.117278">doi:10.1016/j.geoderma.2025.117278</a></span>
+          </li>
+          <li data-doi="10.1007/s10311-024-01817-0">
+            <span class="pub-title">Micro-scale mapping of soil organic carbon using soft X-ray spectromicroscopy</span>
+            <span class="pub-authors"><strong>Dor, M.</strong>, Regier, T., Arthur, T., Guber, A., Kravchenko, A.N.</span>
+            <span class="pub-meta">Environmental Chemistry Letters · <a href="https://doi.org/10.1007/s10311-024-01817-0">doi:10.1007/s10311-024-01817-0</a></span>
+          </li>
+        </ol>
+      </section>
 
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4 group">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">Nature Communications</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Global Hotspots of Particulate Organic Carbon Losses under Climate Change</p>
-          <p class="text-sm text-stone-400">Sun et al.</p>
-        </div>
-      </div>
+      <section class="pub-year" data-year="2023">
+        <h2>2023</h2>
+        <ol class="pub-list">
+          <li data-doi="10.1016/j.apcatb.2023.123065">
+            <span class="pub-title">Upcycling of polyvinyl chloride to hydrocarbon waxes via dechlorination and catalytic hydrogenation</span>
+            <span class="pub-authors">Svadlenak, S., Wojcik, S., Ogunlalu, O., Vu, M., <strong>Dor, M.</strong>, Boudouris, B.W., Wildenschild, D., Goulas, K.A.</span>
+            <span class="pub-meta">Applied Catalysis B: Environmental, 338, 123065 · <a href="https://doi.org/10.1016/j.apcatb.2023.123065">doi:10.1016/j.apcatb.2023.123065</a></span>
+          </li>
+          <li data-doi="10.1111/ejss.13415">
+            <span class="pub-title">Organic carbon enables the biotic engineering of beneficial soil structure in Profundihumic and Haplic Ferralsols</span>
+            <span class="pub-authors">Martinez, P., Lybrand, R.A., McFarlane, K.J., <strong>Dor, M.</strong>, Gallo, A.C., Mayedo, A., Marini, F., Vidal-Torrado, P., Kleber, M.</span>
+            <span class="pub-meta">European Journal of Soil Science, 74(5) · <a href="https://doi.org/10.1111/ejss.13415">doi:10.1111/ejss.13415</a></span>
+          </li>
+          <li data-doi="10.1021/acsenergylett.3c00787">
+            <span class="pub-title">High-efficiency X-ray sensing with recyclable perovskite–graphene heterostructured transistors</span>
+            <span class="pub-authors">Shirley, K., Tsai, H., Cucciniello, N., Bird, J., Jia, Q., Torres, E., Butler, P., Butler, A., Crocco, J., Taha, E., Alhawsawi, A., Germino, J., <strong>Dor, M.</strong>, Dun, C., Firat, O., Parker, J., Graham, M., Novoselov, K.S., Nie, W.</span>
+            <span class="pub-meta">ACS Energy Letters, 8, 3161–3170 · <a href="https://doi.org/10.1021/acsenergylett.3c00787">doi:10.1021/acsenergylett.3c00787</a></span>
+          </li>
+        </ol>
+      </section>
 
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4 group">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">Journal of Environmental Management</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Integrated and managed grasses shape soil pore networks in tropical systems</p>
-          <p class="text-sm text-stone-400">Bordonal et al.</p>
-        </div>
-      </div>
+      <section class="pub-year" data-year="2022">
+        <h2>2022</h2>
+        <ol class="pub-list">
+          <li data-doi="10.3390/app12063044">
+            <span class="pub-title">Modified compositions of micelle–clay and liposome–clay composites for optimal removal from water of bacteria and hydrophobic neutral chemicals</span>
+            <span class="pub-authors">Benitez, A.R., Margalit, D., Ryskin, M., <strong>Dor, M.</strong>, Shauli, U., Nir, S., Polubesova, T., Ben-Ari, J., Kertsnus-Banchik, J., Undabeytia, T.</span>
+            <span class="pub-meta">Applied Sciences, 12(6), 3044 · <a href="https://doi.org/10.3390/app12063044">doi:10.3390/app12063044</a></span>
+          </li>
+          <li data-doi="10.1016/j.geodrs.2022.e00505">
+            <span class="pub-title">Soil priorities in Israel</span>
+            <span class="pub-authors">Itkin, D., Bar-Tal, A., Crouvi, O., <strong>Dor, M.</strong>, Erel, R., Eshel, G., Gross, A., Levy, G.J., Minz, D., Rozenstein, O., Yalin, D.</span>
+            <span class="pub-meta">Geoderma Regional, 29 · <a href="https://doi.org/10.1016/j.geodrs.2022.e00505">doi:10.1016/j.geodrs.2022.e00505</a></span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pub-year" data-year="2021">
+        <h2>2021</h2>
+        <ol class="pub-list">
+          <li data-doi="10.1016/j.chemosphere.2020.127910">
+            <span class="pub-title">Diverse effects of wetting and drying cycles on soil aggregation: Implications on pesticide leaching</span>
+            <span class="pub-authors">Hochman, D.*, <strong>Dor, M.*</strong>, Mishael, Y. <span style="color: var(--muted)">(*equal contribution)</span></span>
+            <span class="pub-meta">Chemosphere, 263, 127910 · <a href="https://doi.org/10.1016/j.chemosphere.2020.127910">doi:10.1016/j.chemosphere.2020.127910</a></span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pub-year" data-year="2020">
+        <h2>2020</h2>
+        <ol class="pub-list">
+          <li data-doi="10.1016/j.marpetgeo.2020.104707">
+            <span class="pub-title">Scale dependence of textural alignment in shales quantified using electron microscopy</span>
+            <span class="pub-authors">Kaduri, M., <strong>Dor, M.</strong>, Day-Stirrat, R.J., Emmanuel, S.</span>
+            <span class="pub-meta">Marine and Petroleum Geology, 122, 104707 · <a href="https://doi.org/10.1016/j.marpetgeo.2020.104707">doi:10.1016/j.marpetgeo.2020.104707</a></span>
+          </li>
+          <li data-doi="10.1016/j.jcis.2020.01.084">
+            <span class="pub-title">Assembly of clay mineral platelets, tactoids, and aggregates: Effect of mineral structure and solution salinity</span>
+            <span class="pub-authors"><strong>Dor, M.</strong>, Levi-Kalisman, Y., Day-Stirrat, R.J., Mishael, Y., Emmanuel, S.</span>
+            <span class="pub-meta">Journal of Colloid and Interface Science, 566, 163–170 · <a href="https://doi.org/10.1016/j.jcis.2020.01.084">doi:10.1016/j.jcis.2020.01.084</a></span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pub-year" data-year="2019">
+        <h2>2019</h2>
+        <ol class="pub-list">
+          <li data-doi="10.1002/ldr.3256">
+            <span class="pub-title">Microstructural changes in soils induced by wetting and drying: Effects on atrazine mobility</span>
+            <span class="pub-authors"><strong>Dor, M.</strong>, Emmanuel, S., Brumfeld, V., Levy, G.J., Mishael, Y.G.</span>
+            <span class="pub-meta">Land Degradation &amp; Development, 30(7), 746–755 · <a href="https://doi.org/10.1002/ldr.3256">doi:10.1002/ldr.3256</a></span>
+          </li>
+        </ol>
+      </section>
 
     </div>
   </section>
+</main>
 
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- 2025 -->
-  <section class="max-w-5xl mx-auto px-6 py-14">
-    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">2025</p>
-    <div class="flex flex-col gap-6">
-
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-amber-50 text-amber-700 text-xs font-medium px-2.5 py-1 rounded-lg">Environmental Chemistry Letters</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Micro-Scale Mapping of Soil Organic Carbon Using Soft X-Ray Spectromicroscopy</p>
-          <p class="text-sm text-stone-400">Dor et al.</p>
-        </div>
-      </div>
-
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Miscanthus effects on soil water retention compared to maize crops</p>
-        </div>
-      </div>
-
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Soil properties in short-grass steppe ecosystems under drought stress</p>
-        </div>
-      </div>
-
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Land use conversion impacts on pore structure and carbon storage</p>
-        </div>
-      </div>
-
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Organic matter composition differences across tropical land uses</p>
-        </div>
-      </div>
-
-      <div class="fade-up flex flex-col sm:flex-row sm:items-start gap-4">
-        <div class="flex-shrink-0 mt-0.5">
-          <span class="inline-block bg-stone-100 text-stone-600 text-xs font-medium px-2.5 py-1 rounded-lg">2025</span>
-        </div>
-        <div>
-          <p class="text-sm font-medium text-stone-900 leading-snug mb-1">Enzyme activity suppression in periodically waterlogged soils</p>
-        </div>
-      </div>
-
+<footer class="wrap" style="padding-top: 20px">
+  <div class="footer">
+    <div class="stack" style="gap: 4px">
+      <b>Soil Systems Lab</b>
+      <span>Ben-Gurion University of the Negev</span>
     </div>
-  </section>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="opportunities.html">Join us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
 
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- 2019–2023 -->
-  <section class="max-w-5xl mx-auto px-6 py-14">
-    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">2019 – 2023</p>
-    <div class="fade-up max-w-2xl">
-      <p class="text-sm text-stone-500 leading-relaxed mb-6">Earlier work addressed foundational topics in soil science, including:</p>
-      <ul class="flex flex-col gap-3">
-        <li class="flex items-start gap-3 text-sm text-stone-600">
-          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
-          Soil aggregation mechanisms
-        </li>
-        <li class="flex items-start gap-3 text-sm text-stone-600">
-          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
-          Clay mineral assembly
-        </li>
-        <li class="flex items-start gap-3 text-sm text-stone-600">
-          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
-          Pesticide mobility in soil
-        </li>
-        <li class="flex items-start gap-3 text-sm text-stone-600">
-          <i data-lucide="minus" class="w-4 h-4 text-stone-300 mt-0.5 flex-shrink-0"></i>
-          Soil structural changes related to wetting cycles
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Scholar CTA -->
-  <section class="max-w-5xl mx-auto px-6 pb-20">
-    <div class="fade-up bg-stone-50 rounded-2xl px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-      <div>
-        <h3 class="text-base font-semibold text-stone-900 mb-1">Full publication list</h3>
-        <p class="text-sm text-stone-500">Available via the PI's Google Scholar profile.</p>
-      </div>
-      <a href="https://scholar.google.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-stone-700 transition-colors whitespace-nowrap">
-        Google Scholar <i data-lucide="external-link" class="w-4 h-4"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-      <span>© 2026 Soil Systems Lab. All rights reserved.</span>
-      <a href="contact.html" class="hover:text-stone-600 transition-colors">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+<script src="assets/site.js"></script>
 </body>
 </html>

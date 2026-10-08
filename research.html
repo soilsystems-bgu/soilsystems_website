@@ -1,155 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research — Soil Systems Lab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
-    }
-  </script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <style>
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Soil Systems Lab</title>
+  <meta name="description" content="Current research projects of the Soil Systems Lab: soil pore networks, carbon dynamics, microplastics, and plant–soil–microbiome systems.">
+  <meta property="og:title" content="Research · Soil Systems Lab">
+  <meta property="og:description" content="Current research projects of the Soil Systems Lab: soil pore networks, carbon dynamics, microplastics, and plant–soil–microbiome systems.">
+  <meta property="og:image" content="https://soilsystemslab.netlify.app/images/field-hero.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="font-sans bg-white text-stone-800 antialiased">
-
-  <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-      <a href="index.html" class="text-sm font-semibold tracking-tight text-stone-900">Soil Systems Lab</a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-stone-500">
-        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="text-stone-900 font-medium">Research</a>
-        <a href="publications.html" class="hover:text-stone-900 transition-colors">Publications</a>
-        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-brand" href="index.html"><span>Soil Systems Lab</span><small>Ben-Gurion University of the Negev</small></a>
+      <button class="nav-menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="opportunities.html">Join us</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </div>
-      <button id="menu-btn" class="md:hidden text-stone-500" aria-label="Menu">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 bg-white">
-      <div class="flex flex-col px-6 py-4 gap-4 text-sm text-stone-500">
-        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="text-stone-900 font-medium">Research</a>
-        <a href="publications.html" class="hover:text-stone-900 transition-colors">Publications</a>
-        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+</header>
 
-  <!-- Header -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-12">
-    <div class="fade-up">
-      <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">What We Do</p>
-      <h1 class="text-4xl font-bold tracking-tight text-stone-900 mb-4">Research</h1>
-      <p class="text-base text-stone-500 max-w-2xl leading-relaxed">
-        Soils are among the most complex systems on Earth, with tightly interconnected processes governing carbon storage, microbial activity, and water movement. The Soil Systems Lab bridges structural and biogeochemical approaches across multiple scales to advance our understanding of soil as a living system.
-      </p>
+<main id="main">
+  <section class="wrap">
+    <div class="inset page-head">
+      <h1 class="h-lg">Research</h1>
     </div>
   </section>
 
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- Research Area 1 -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <div class="fade-up flex flex-col sm:flex-row gap-8">
-      <div class="flex-shrink-0">
-        <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-stone-100">
-          <i data-lucide="layers" class="w-5 h-5 text-stone-600"></i>
+  <section class="wrap" aria-label="Research projects" style="padding-bottom: 56px">
+    <div class="inset">
+      <div class="project-list">
+      <article class="project-row reveal" id="precipitation-carbon">
+        <div class="project-media"><img src="images/precipitation-roots.jpg" alt="Micro-CT render of roots and pores in soil" loading="lazy"></div>
+        <div class="project-text">
+          <h2>Soil structure and carbon under changing precipitation</h2>
+          <p><span class="summary-q">How do droughts and extreme rainfall change the way soils store carbon?</span> We trace these effects from pores to field plots, using X-ray and synchrotron imaging to map soil structure and carbon at the microscale, and stable isotope labeling to follow photosynthetic carbon through the plant–soil–microbiome system.</p>
         </div>
-      </div>
-      <div class="max-w-2xl">
-        <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Research Area 01</p>
-        <h2 class="text-2xl font-semibold text-stone-900 mb-4">Soil Pore Structure and Carbon Dynamics</h2>
-        <p class="text-base text-stone-500 leading-relaxed">
-          Soils hold enormous potential as carbon stores. We examine how pore structure drives carbon sequestration and greenhouse gas emissions, aiming to understand why organic matter persists over varying timescales. By linking physical architecture to biogeochemical function, we work to uncover the structural controls on soil carbon stability.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- Research Area 2 -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <div class="fade-up flex flex-col sm:flex-row gap-8">
-      <div class="flex-shrink-0">
-        <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-stone-100">
-          <i data-lucide="microscope" class="w-5 h-5 text-stone-600"></i>
+      </article>
+      <article class="project-row reveal" id="plant-p-uptake">
+        <div class="project-media"><img src="images/phosphate-carbon.jpg" alt="Arabidopsis seedlings with traced roots, a soil carbon map from X-ray spectromicroscopy, and carbon spectra" loading="lazy"></div>
+        <div class="project-text">
+          <h2>Linking plant phosphate uptake to soil carbon dynamics</h2>
+          <p><span class="summary-q">How do plants regulate root foraging in soil pore structure, and how does this affect carbon persistence?</span> Plants adjust root growth to reach phosphorus-rich zones in soil. We connect plant genetics and molecular signaling to how roots grow through real soil pore networks, combining 3D root and rhizosphere imaging with ¹³C labeling to trace effects on microbial activity and carbon persistence.</p>
         </div>
-      </div>
-      <div class="max-w-2xl">
-        <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Research Area 02</p>
-        <h2 class="text-2xl font-semibold text-stone-900 mb-4">Methodological Development — Imaging &amp; Experimental Innovation</h2>
-        <p class="text-base text-stone-500 leading-relaxed">
-          Understanding soil requires tools that preserve its integrity during analysis. We develop high-resolution, spatially resolved techniques using both laboratory and synchrotron-based approaches. These methods allow us to study soil structure, chemistry, and biology while maintaining the soil's natural architecture, opening new windows into processes that were previously invisible.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- Research Area 3 -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <div class="fade-up flex flex-col sm:flex-row gap-8">
-      <div class="flex-shrink-0">
-        <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-stone-100">
-          <i data-lucide="sprout" class="w-5 h-5 text-stone-600"></i>
+      </article>
+      <article class="project-row reveal" id="soil-on-a-chip">
+        <div class="project-media"><img src="images/micro-ct-thick4.jpg" alt="Micro-CT render of a soil pore network" loading="lazy"></div>
+        <div class="project-text">
+          <h2>Soil-on-a-chip: microbial habitats in pore networks</h2>
+          <p><span class="summary-q">How do pore size, geometry, and connectivity shape where bacteria live and how active they are?</span> Bacteria in soil live in microenvironments defined by pore size, geometry, and connectivity. We design microfluidic chips based on real soil pore architecture and use microscopy to track bacterial activity across them, testing which pore structures bacteria favor and how this links to carbon cycling.</p>
         </div>
-      </div>
-      <div class="max-w-2xl">
-        <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Research Area 03</p>
-        <h2 class="text-2xl font-semibold text-stone-900 mb-4">Agricultural and Environmental Applications</h2>
-        <p class="text-base text-stone-500 leading-relaxed">
-          Human management and a changing climate are reshaping soils worldwide. We investigate how tillage, irrigation, crop rotations, and shifting climate conditions alter soil structure and function at multiple scales. Our goal is to translate fundamental insights into practical guidance for sustainable land management and climate resilience.
-        </p>
+      </article>
+      <article class="project-row reveal" id="microplastics">
+        <div class="project-media"><img src="images/microplastics-ct.jpg" alt="Micro-CT slice of soil shown in four image-processing stages" loading="lazy"></div>
+        <div class="project-text">
+          <h2>Microplastics in agricultural soils</h2>
+          <p><span class="summary-q">How do microplastics move, accumulate, and interact within agricultural soils?</span> We image them in three dimensions with X-ray microtomography and use deep learning-based image analysis to locate and quantify them in soil.</p>
+        </div>
+      </article>
       </div>
     </div>
   </section>
+</main>
 
-  <!-- Publications CTA -->
-  <section class="max-w-5xl mx-auto px-6 pb-20">
-    <div class="fade-up bg-stone-50 rounded-2xl px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-      <div>
-        <h3 class="text-base font-semibold text-stone-900 mb-1">See our published work</h3>
-        <p class="text-sm text-stone-500">Peer-reviewed papers across soil physics, biogeochemistry, and imaging.</p>
-      </div>
-      <a href="publications.html" class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-stone-700 transition-colors whitespace-nowrap">
-        Publications <i data-lucide="arrow-right" class="w-4 h-4"></i>
-      </a>
+<footer class="wrap" style="padding-top: 20px">
+  <div class="join reveal">
+    <h2 class="h-md" style="max-width: 820px; line-height: 1.15">Interested in one of these projects?</h2>
+    <a class="btn btn-light" href="opportunities.html">Join us</a>
+  </div>
+  <div class="footer">
+    <div class="stack" style="gap: 4px">
+      <b>Soil Systems Lab</b>
+      <span>Ben-Gurion University of the Negev</span>
     </div>
-  </section>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="opportunities.html">Join us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="border-t border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-      <span>© 2026 Soil Systems Lab. All rights reserved.</span>
-      <a href="contact.html" class="hover:text-stone-600 transition-colors">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+<script src="assets/site.js"></script>
 </body>
 </html>

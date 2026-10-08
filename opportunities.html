@@ -1,173 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opportunities — Soil Systems Lab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
-    }
-  </script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <style>
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join us · Soil Systems Lab</title>
+  <meta name="description" content="Join the Soil Systems Lab at Ben-Gurion University of the Negev: MSc, PhD and postdoctoral opportunities.">
+  <meta property="og:title" content="Join us · Soil Systems Lab">
+  <meta property="og:description" content="Join the Soil Systems Lab at Ben-Gurion University of the Negev: MSc, PhD and postdoctoral opportunities.">
+  <meta property="og:image" content="https://soilsystemslab.netlify.app/images/field-hero.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="font-sans bg-white text-stone-800 antialiased">
-
-  <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-      <a href="index.html" class="text-sm font-semibold tracking-tight text-stone-900">Soil Systems Lab</a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-stone-500">
-        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
-        <a href="publications.html" class="hover:text-stone-900 transition-colors">Publications</a>
-        <a href="opportunities.html" class="text-stone-900 font-medium">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-brand" href="index.html"><span>Soil Systems Lab</span><small>Ben-Gurion University of the Negev</small></a>
+      <button class="nav-menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="opportunities.html" aria-current="page">Join us</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </div>
-      <button id="menu-btn" class="md:hidden text-stone-500" aria-label="Menu">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 bg-white">
-      <div class="flex flex-col px-6 py-4 gap-4 text-sm text-stone-500">
-        <a href="index.html" class="hover:text-stone-900 transition-colors">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
-        <a href="publications.html" class="hover:text-stone-900 transition-colors">Publications</a>
-        <a href="opportunities.html" class="text-stone-900 font-medium">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+</header>
 
-  <!-- Header -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-12">
-    <div class="fade-up">
-      <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Join Us</p>
-      <h1 class="text-4xl font-bold tracking-tight text-stone-900 mb-4">Opportunities</h1>
-      <p class="text-base text-stone-500 max-w-xl leading-relaxed">
-        We are always looking for motivated researchers to join the team. If you are interested in soil science, carbon cycling, imaging techniques, or sustainable agriculture, we encourage you to reach out.
-      </p>
+<main id="main">
+  <section class="wrap" id="positions">
+    <div class="inset page-head join-intro">
+      <h1 class="h-lg">Join us</h1>
+      <p class="lead">We are looking for curious, motivated MSc and PhD students and postdoctoral researchers to study how soil structure shapes soil function.</p>
     </div>
   </section>
 
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- Positions -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">Open Positions</p>
-
-    <div class="flex flex-col gap-5">
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="flex items-start justify-between gap-4 flex-wrap">
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-stone-100 flex-shrink-0">
-              <i data-lucide="flask-conical" class="w-4 h-4 text-stone-600"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-semibold text-stone-900">PhD Candidate</h3>
-              <p class="text-sm text-stone-400 mt-0.5">Doctoral Program</p>
-            </div>
-          </div>
-          <span class="text-xs font-medium text-amber-700 bg-amber-50 px-3 py-1 rounded-lg">Open</span>
-        </div>
-        <p class="text-sm text-stone-500 leading-relaxed mt-4 max-w-xl">
-          Positions available for doctoral candidates interested in soil physics, biogeochemistry, or advanced imaging methods. Strong quantitative or experimental background preferred.
-        </p>
-      </div>
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="flex items-start justify-between gap-4 flex-wrap">
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-stone-100 flex-shrink-0">
-              <i data-lucide="book-open" class="w-4 h-4 text-stone-600"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-semibold text-stone-900">MSc Student</h3>
-              <p class="text-sm text-stone-400 mt-0.5">Master's Program</p>
-            </div>
-          </div>
-          <span class="text-xs font-medium text-amber-700 bg-amber-50 px-3 py-1 rounded-lg">Open</span>
-        </div>
-        <p class="text-sm text-stone-500 leading-relaxed mt-4 max-w-xl">
-          Master's students with an interest in soil ecology, environmental science, or agricultural systems are welcome to inquire. Projects span field, laboratory, and computational methods.
-        </p>
-      </div>
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="flex items-start justify-between gap-4 flex-wrap">
-          <div class="flex items-center gap-4">
-            <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-stone-100 flex-shrink-0">
-              <i data-lucide="award" class="w-4 h-4 text-stone-600"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-semibold text-stone-900">Postdoctoral Researcher</h3>
-              <p class="text-sm text-stone-400 mt-0.5">Postdoctoral Position</p>
-            </div>
-          </div>
-          <span class="text-xs font-medium text-stone-500 bg-stone-100 px-3 py-1 rounded-lg">As available</span>
-        </div>
-        <p class="text-sm text-stone-500 leading-relaxed mt-4 max-w-xl">
-          Postdoctoral opportunities arise periodically. Candidates with expertise in soil science, stable isotope analysis, synchrotron techniques, or related fields are encouraged to reach out proactively.
-        </p>
-      </div>
-
+  <section class="wrap" style="padding-bottom: 80px">
+    <div class="inset join-cards">
+      <article class="join-card">
+        <h2 class="h-sm">Who we are looking for</h2>
+        <p>People with a background in the natural sciences or engineering, quantitative skills, and a genuine interest in how soils work.</p>
+      </article>
+      <article class="join-card join-card-accent" id="apply">
+        <h2 class="h-sm">How to apply</h2>
+        <p>Email your CV and a short note about your background and interests.</p>
+        <a class="btn btn-light" href="mailto:maozd@bgu.ac.il?subject=Joining%20the%20Soil%20Systems%20Lab">maozd@bgu.ac.il</a>
+      </article>
+      <article class="join-card join-card-tint" id="postdocs">
+        <h2 class="h-sm">Postdoctoral fellowships</h2>
+        <p>We support applications for postdoctoral fellowships; get in touch to discuss options.</p>
+        <a class="btn btn-dark" href="mailto:maozd@bgu.ac.il?subject=Postdoctoral%20fellowship%20enquiry">Get in touch</a>
+      </article>
+      <article class="join-card" id="collaborations">
+        <h2 class="h-sm">Collaborations</h2>
+        <p>We welcome collaborations with researchers working on related questions or methods. If your work connects with ours, we would be glad to hear from you.</p>
+        <a class="btn btn-dark" href="mailto:maozd@bgu.ac.il?subject=Collaboration">Get in touch</a>
+      </article>
     </div>
   </section>
+</main>
 
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
-
-  <!-- Interest areas -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
-    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-8 fade-up">Areas of Interest</p>
-    <div class="fade-up grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl">
-      <span class="text-sm text-stone-600 border border-stone-100 rounded-xl px-4 py-2.5 text-center">Soil Science</span>
-      <span class="text-sm text-stone-600 border border-stone-100 rounded-xl px-4 py-2.5 text-center">Carbon Cycling</span>
-      <span class="text-sm text-stone-600 border border-stone-100 rounded-xl px-4 py-2.5 text-center">Imaging Methods</span>
-      <span class="text-sm text-stone-600 border border-stone-100 rounded-xl px-4 py-2.5 text-center">Sustainable Agriculture</span>
+<footer class="wrap" style="padding-top: 20px">
+  <div class="footer">
+    <div class="stack" style="gap: 4px">
+      <b>Soil Systems Lab</b>
+      <span>Ben-Gurion University of the Negev</span>
     </div>
-  </section>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="opportunities.html">Join us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
 
-  <!-- Contact CTA -->
-  <section class="max-w-5xl mx-auto px-6 pb-20">
-    <div class="fade-up bg-stone-50 rounded-2xl px-8 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-      <div>
-        <h3 class="text-base font-semibold text-stone-900 mb-1">Ready to inquire?</h3>
-        <p class="text-sm text-stone-500">Send us a brief message about your background and interests.</p>
-      </div>
-      <a href="contact.html" class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-stone-700 transition-colors whitespace-nowrap">
-        Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-      <span>© 2026 Soil Systems Lab. All rights reserved.</span>
-      <a href="contact.html" class="hover:text-stone-600 transition-colors">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+<script src="assets/site.js"></script>
 </body>
 </html>

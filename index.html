@@ -1,142 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soil Systems Lab</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            accent: { DEFAULT: '#78716c', light: '#d6d3d1', dark: '#57534e' }
-          }
-        }
-      }
-    }
-  </script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <style>
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soil Systems Lab · Ben-Gurion University of the Negev</title>
+  <meta name="description" content="The Soil Systems Lab at Ben-Gurion University studies the physical, chemical, and biological processes that govern soil carbon cycling, ecosystem functions, and health.">
+  <meta property="og:title" content="Soil Systems Lab · Ben-Gurion University of the Negev">
+  <meta property="og:description" content="The Soil Systems Lab at Ben-Gurion University studies the physical, chemical, and biological processes that govern soil carbon cycling, ecosystem functions, and health.">
+  <meta property="og:image" content="https://soilsystemslab.netlify.app/images/field-hero.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="font-sans bg-white text-stone-800 antialiased">
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-100">
-    <div class="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-      <a href="index.html" class="text-sm font-semibold tracking-tight text-stone-900">Soil Systems Lab</a>
-      <div class="hidden md:flex items-center gap-8 text-sm text-stone-500">
-        <a href="index.html" class="text-stone-900 font-medium">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
-        <a href="publications.html" class="hover:text-stone-900 transition-colors">Publications</a>
-        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="nav-brand" href="index.html"><span>Soil Systems Lab</span><small>Ben-Gurion University of the Negev</small></a>
+      <button class="nav-menu" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="opportunities.html">Join us</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </div>
-      <button id="menu-btn" class="md:hidden text-stone-500" aria-label="Menu">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 bg-white">
-      <div class="flex flex-col px-6 py-4 gap-4 text-sm text-stone-500">
-        <a href="index.html" class="text-stone-900 font-medium">Home</a>
-        <a href="people.html" class="hover:text-stone-900 transition-colors">People</a>
-        <a href="research.html" class="hover:text-stone-900 transition-colors">Research</a>
-        <a href="publications.html" class="hover:text-stone-900 transition-colors">Publications</a>
-        <a href="opportunities.html" class="hover:text-stone-900 transition-colors">Opportunities</a>
-        <a href="contact.html" class="hover:text-stone-900 transition-colors">Contact</a>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
-    <div class="max-w-2xl fade-up">
-      <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Ben-Gurion University of the Negev</p>
-      <h1 class="text-5xl font-bold tracking-tight text-stone-900 leading-tight mb-6">
-        Understanding Soil<br />as a Living System
-      </h1>
-      <p class="text-lg text-stone-500 leading-relaxed mb-10">
-        The Soil Systems Lab studies the physical, chemical, and biological processes that govern soil carbon cycling, ecosystem functions, and health.
-      </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="research.html" class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-medium px-5 py-2.5 rounded-xl hover:bg-stone-700 transition-colors">
-          Our Research <i data-lucide="arrow-right" class="w-4 h-4"></i>
+<section class="hero-stage" aria-label="Introduction">
+  <div class="hero2">
+    <div class="hero-panels" aria-hidden="true">
+      <figure><img src="images/hero-field.jpg" alt=""><span>Field<em> · m</em></span></figure>
+      <figure><img src="images/hero-mesocosm.jpg" alt=""><span>Mesocosm<em> · cm</em></span></figure>
+      <figure><img src="images/hero-rhizosphere.jpg" alt=""><span>Rhizosphere<em> · mm</em></span></figure>
+      <figure><img src="images/hero-microhabitats.jpg" alt=""><span>Microbial habitats<em> · µm–mm</em></span></figure>
+      <figure><img src="images/hero-minerals.jpg" alt=""><span>Mineral surfaces<em> · µm–nm</em></span></figure>
+    </div>
+    <div class="hero-card">
+      <h1 class="hero-title">Soil Systems Lab</h1>
+      <p class="hero-tagline">Structure shapes function — from pores to ecosystems</p>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+  <section class="wrap" aria-labelledby="projects-title" style="padding-top: 36px; padding-bottom: 72px">
+    <div class="inset stack" style="gap: 28px">
+      <div class="row-between">
+        <h2 class="h-md" id="projects-title">Current projects</h2>
+        <a class="link-arrow" href="research.html">All projects →</a>
+      </div>
+      <div class="grid teaser-grid reveal">
+        <a class="card project-card" href="research.html#precipitation-carbon">
+          <img src="images/precipitation-roots.jpg" alt="Micro-CT render of roots and pores in soil" loading="lazy">
+          <div class="card-body"><h3 class="h-sm">Soil structure and carbon under changing precipitation</h3><p>How changing precipitation affects soil structure, rhizosphere processes, and carbon storage.</p></div>
         </a>
-        <a href="opportunities.html" class="inline-flex items-center gap-2 border border-stone-200 text-stone-700 text-sm font-medium px-5 py-2.5 rounded-xl hover:border-stone-400 transition-colors">
-          Join the Lab
+        <a class="card project-card" href="research.html#plant-p-uptake">
+          <img src="images/phosphate-carbon.jpg" alt="Arabidopsis seedlings with traced roots, a soil carbon map from X-ray spectromicroscopy, and carbon spectra" loading="lazy">
+          <div class="card-body"><h3 class="h-sm">Linking plant phosphate uptake to soil carbon dynamics</h3><p>How do plants regulate root foraging in soil pore structure, and how does this affect carbon persistence?</p></div>
+        </a>
+        <a class="card project-card" href="research.html#soil-on-a-chip">
+          <img src="images/micro-ct-thick4.jpg" alt="Micro-CT render of a soil pore network" loading="lazy">
+          <div class="card-body"><h3 class="h-sm">Soil-on-a-chip: microbial habitats in pore networks</h3><p>How do pore size, geometry, and connectivity shape where bacteria live and how active they are?</p></div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Divider -->
-  <div class="max-w-5xl mx-auto px-6"><div class="border-t border-stone-100"></div></div>
+</main>
 
-  <!-- Research themes -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
-    <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-10 fade-up">Research Themes</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-100 mb-4">
-          <i data-lucide="layers" class="w-4 h-4 text-stone-600"></i>
-        </div>
-        <h3 class="text-sm font-semibold text-stone-900 mb-1">Soil Structure &amp; Pore Architecture</h3>
-        <p class="text-sm text-stone-500 leading-relaxed">Investigation of soil's structural composition and internal spaces.</p>
-      </div>
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-100 mb-4">
-          <i data-lucide="recycle" class="w-4 h-4 text-stone-600"></i>
-        </div>
-        <h3 class="text-sm font-semibold text-stone-900 mb-1">Soil Carbon Cycling</h3>
-        <p class="text-sm text-stone-500 leading-relaxed">Examination of carbon movement and transformation within soil systems.</p>
-      </div>
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-100 mb-4">
-          <i data-lucide="microscope" class="w-4 h-4 text-stone-600"></i>
-        </div>
-        <h3 class="text-sm font-semibold text-stone-900 mb-1">Imaging &amp; Experimental Innovation</h3>
-        <p class="text-sm text-stone-500 leading-relaxed">Development and application of advanced visualization and testing techniques.</p>
-      </div>
-
-      <div class="fade-up border border-stone-100 rounded-2xl p-6 hover:border-stone-300 transition-colors">
-        <div class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-100 mb-4">
-          <i data-lucide="sprout" class="w-4 h-4 text-stone-600"></i>
-        </div>
-        <h3 class="text-sm font-semibold text-stone-900 mb-1">Agriculture &amp; Soil Health</h3>
-        <p class="text-sm text-stone-500 leading-relaxed">Focus on soil quality as it relates to farming and ecological wellness.</p>
-      </div>
-
+<footer class="wrap" style="padding-top: 20px">
+  <div class="join reveal">
+    <h2 class="h-md" style="max-width: 820px; line-height: 1.15">Prospective students and collaborators,<br>we would be glad to hear from you.</h2>
+    <a class="btn btn-light" href="contact.html">Contact us</a>
+  </div>
+  <div class="footer">
+    <div class="stack" style="gap: 4px">
+      <b>Soil Systems Lab</b>
+      <span>Ben-Gurion University of the Negev</span>
     </div>
-  </section>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="opportunities.html">Join us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="border-t border-stone-100 mt-8">
-    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-      <span>© 2026 Soil Systems Lab. All rights reserved.</span>
-      <a href="contact.html" class="hover:text-stone-600 transition-colors">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    lucide.createIcons();
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+<script src="assets/site.js"></script>
 </body>
 </html>
