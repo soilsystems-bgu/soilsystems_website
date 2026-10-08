@@ -51,10 +51,9 @@ The nav and footer are repeated in every page. When changing them, change all pa
 
 Links into the middle of a page always use an anchor (`opportunities.html#positions`) so visitors land on what they clicked for.
 
-## Hero drift animation
-Slow and subtle: 26 s cycle, scale 1.03 → 1.14, translate(-2%, -1.5%), delays -6/-12/-18/-24 s.
-The mesocosm cube panel uses `drift-soft` (zoom 1 → 1.05, no pan) so the large cube is never clipped.
-A stronger version (18 s, scale to 1.22) was tried and rejected as too much.
+## Hero motion
+The panels do not drift or zoom (removed: it made the strip look jittery). Motion is limited to the strip
+widening on scroll and a hovered panel widening (flex-grow transition), both eased.
 
 ## Parked ideas
 - Scale strip ("Soil is different at every scale"): removed for now; the first version is in git history (commit f26563d) if revisited.
