@@ -156,7 +156,7 @@ p { margin: 0; text-wrap: pretty; }
 .hero-stage { padding-top: 6px; }
 .hero2 {
   --p: 0;
-  --w0: min(calc(100% - 40px), calc(var(--wrap) - 40px));
+  --w0: calc(100% - 56px);            /* landing: nearly full width with slim margins; scrolling removes them */
   position: relative; overflow: hidden; background: var(--paper);
   width: calc(var(--w0) + (100% - var(--w0)) * var(--p));
   margin: 0 auto;
