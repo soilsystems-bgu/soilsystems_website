@@ -32,17 +32,11 @@
   --muted: #59605d;
   --line: #dfe2dc;
   --line-2: #cdd1ca;
-  --night: #121517;
-  --night-2: #1e2327;
-  --night-ink: #f4f2ec;
-  --night-muted: #a9b0b3;
+  /* one accent, taken from the lab's micrographs; used for every main action */
   --accent: #1f5f5a;
-
-  /* theme tints, taken from the lab's micrographs */
-  --teal-bg: #e3eeec;   --teal: #1f5f5a;
-  --ochre-bg: #f4ead8;  --ochre: #7c5210;
-  --indigo-bg: #e6e8f5; --indigo: #34408a;
-  --olive-bg: #e9eedd;  --olive: #4b5d1f;
+  --accent-dark: #174844;
+  --teal: #1f5f5a;
+  --teal-bg: #e3eeec;
 
   --radius: 16px;
   --radius-sm: 12px;
@@ -108,8 +102,8 @@ p { margin: 0; text-wrap: pretty; }
 .nav-links a { transition: background-color .15s ease, color .15s ease, box-shadow .15s ease; }
 .nav-links a:hover { background: rgba(31, 95, 90, 0.08); color: var(--teal); }
 .nav-links a[aria-current="page"] { color: var(--teal); background: var(--teal-bg); font-weight: 600; }
-.nav-links a.nav-cta { background: var(--ink); color: var(--paper); }
-.nav-links a.nav-cta:hover { background: var(--teal); color: #fff; }
+.nav-links a.nav-cta { background: var(--accent); color: #fff; }
+.nav-links a.nav-cta:hover { background: var(--accent-dark); color: #fff; }
 .nav-menu { display: none; }
 
 @media (max-width: 940px) {
@@ -132,8 +126,8 @@ p { margin: 0; text-wrap: pretty; }
   text-decoration: none; font-weight: 600; font-size: 16px;
   transition: background-color .15s ease, border-color .15s ease;
 }
-.btn-dark { background: var(--ink); color: var(--paper); }
-.btn-dark:hover { background: #000; }
+.btn-dark { background: var(--accent); color: #fff; }
+.btn-dark:hover { background: var(--accent-dark); }
 .btn-light { background: #fff; color: var(--ink); }
 .btn-line { border: 1px solid var(--line-2); color: var(--ink); background: transparent; }
 .btn-line:hover { border-color: var(--ink); }
