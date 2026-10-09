@@ -10,7 +10,7 @@
   `npx netlify-cli deploy --prod --dir <folder> --site b69253c3-88e0-4421-9ff0-3f59ad597543` (CLAUDE.md is never deployed)
 - Images in `images/`, web JPEGs, ≤1400 px (hero ≤2400 px)
 - Profile logos in `assets/icons/` are from Simple Icons (CC0)
-- Deployed: Netlify + GitHub
+- Netlify is **not** linked to GitHub: pushing changes nothing on the live site; redeploy by hand (above)
 
 The nav and footer are repeated in every page. When changing them, change all pages
 (index, research, people, publications, opportunities, contact, 404).
@@ -58,3 +58,17 @@ widening on scroll and a hovered panel widening (flex-grow transition), both eas
 ## Parked ideas
 - Scale strip ("Soil is different at every scale"): removed for now; the first version is in git history (commit f26563d) if revisited.
 - Hero video: a muted ~10 s loop (1–2 MB, with a poster image) would fit the hero.
+
+## Where things stand (update when work stops)
+
+- Since 2026-10-07 the live site (soilsystemslab.netlify.app) is this branch, `redesign-d`.
+  `main` still holds the old build. PR #1 merges `redesign-d` into `main` once the PI approves.
+- Nothing goes live without the PI's explicit approval.
+- Worktree on the PI's Mac: `~/soilsystemslab/.claude/worktrees/redesign`.
+- Helper scripts (page generator `gen_pages.py`, `linkcheck.py`, `shoot.sh` screenshots, image
+  crops) are uncommitted in `~/soilsystemslab/.claude/site-tools/`. Their paths still point at a
+  deleted temp folder: fix them before reuse, or edit the HTML directly.
+- Next: real content (project texts and images, including the BARD plant-P project; missing
+  people photos and bios), then a final review, merge, and deploy.
+- Hero video: needs a clip from the PI and ffmpeg (not installed) to compress it. An
+  auto-rotating carousel was advised against.
