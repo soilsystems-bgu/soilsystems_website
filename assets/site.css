@@ -192,6 +192,17 @@ p { margin: 0; text-wrap: pretty; }
   .hero-tagline { font-size: 18px; }
   .hero-card { position: static; transform: none; text-align: left; align-items: flex-start; max-width: none; padding: 22px 4px 0; border: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+/* phones only: the panels widen one after another, field -> mineral surfaces, in a slow repeating wave
+   (desktop keeps hover + scroll widening instead). Off when the visitor prefers reduced motion. */
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
+  .hero-panels figure { animation: panel-wave 10s ease-in-out infinite; }
+  .hero-panels figure:nth-child(2) { animation-delay: 2s; }
+  .hero-panels figure:nth-child(3) { animation-delay: 4s; }
+  .hero-panels figure:nth-child(4) { animation-delay: 6s; }
+  .hero-panels figure:nth-child(5) { animation-delay: 8s; }
+}
+@keyframes panel-wave { 0%, 26%, 100% { flex-grow: 1; } 13% { flex-grow: 2.4; } }
+
 /* hero strip: hovering a panel widens it a little, brightens it and shows its full scale label */
 @media (hover: hover) and (min-width: 761px) {
   .hero-panels figure { transition: flex-grow .6s cubic-bezier(.25, .8, .25, 1); }
